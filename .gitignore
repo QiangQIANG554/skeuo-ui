@@ -4,6 +4,10 @@ docs/node_modules/
 
 # 构建产物
 dist/
+docs/.vitepress/dist/
+
+# VitePress 缓存
+docs/.vitepress/cache/
 
 # 日志
 *.log
