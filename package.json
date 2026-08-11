@@ -5,7 +5,8 @@
   "license": "MIT",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "logo.svg"
   ],
   "main": "./dist/skeuo-ui.umd.cjs",
   "module": "./dist/skeuo-ui.js",
