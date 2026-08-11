@@ -1,0 +1,28 @@
+/* ============================================================
+   Skeuo UI Base — 基础样式（Neumorphism）
+   ============================================================ */
+.skeuo-reset,
+.skeuo-reset * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 通用凸起/凹陷表面，供页面布局复用 */
+.s-raise {
+  background: var(--s-surface);
+  border-radius: var(--s-r-md);
+  box-shadow: var(--s-shadow-raised);
+}
+
+.s-raise-sm {
+  background: var(--s-surface);
+  border-radius: var(--s-r-md);
+  box-shadow: var(--s-shadow-raised-sm);
+}
+
+.s-pressed {
+  background: var(--s-surface);
+  border-radius: var(--s-r-md);
+  box-shadow: var(--s-shadow-pressed);
+}

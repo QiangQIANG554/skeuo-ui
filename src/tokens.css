@@ -1,0 +1,96 @@
+/* ============================================================
+   Skeuo UI Tokens — 设计令牌层（Neumorphism / Soft UI）
+   纯正新拟物：同色系背景 + 双向阴影，无边框、无渐变。
+   凸起 = 亮影(左上) + 暗影(右下)；凹陷 = 反向 inset。
+   使用方式：引入一次 tokens.css（或 style.css），
+   然后在 <html> 上设置 data-theme="dark" 切换深色。
+   ============================================================ */
+:root {
+  /* ---- 色板：浅灰白同色基底 ---- */
+  --s-bg:            #e8ecf1;
+  --s-bg-deep:       #dfe4ea;
+  --s-surface:       #e8ecf1;   /* 与背景同色——Neumorphism 的本质 */
+  --s-surface-2:     #e4e8ee;
+  --s-ink:           #5c6470;
+  --s-ink-soft:      #7a8290;
+  --s-ink-faint:     #a3aab6;
+  --s-line:          transparent;
+
+  /* ---- 强调色（Neumorphism 低饱和蓝，避免刺眼） ---- */
+  --s-primary:       #5f86a8;
+  --s-primary-deep:  #4a6f8f;
+  --s-primary-light: #7ba0bf;
+  --s-accent:        #6ba3a0;
+  --s-accent-deep:   #558a87;
+  --s-danger:        #c07b74;
+  --s-danger-deep:   #a3645e;
+  --s-gold:          #c2a15e;
+
+  /* ---- 双向阴影色：暗影取背景变暗，亮影取背景变亮 ---- */
+  --s-sh-dark:       #c9cfd8;
+  --s-sh-dark-strong:#bcc3cd;
+  --s-sh-light:      #ffffff;
+  --s-sh-light-soft: #f4f7fb;
+
+  /* ---- 阴影阶梯：Neumorphism 灵魂，四档 ---- */
+  --s-shadow-raised:
+    7px 7px 14px var(--s-sh-dark),
+    -7px -7px 14px var(--s-sh-light);
+  --s-shadow-raised-sm:
+    4px 4px 8px var(--s-sh-dark),
+    -4px -4px 8px var(--s-sh-light);
+  --s-shadow-pressed:
+    5px 5px 10px var(--s-sh-dark) inset,
+    -5px -5px 10px var(--s-sh-light) inset;
+  --s-shadow-inset:
+    3px 3px 6px var(--s-sh-dark) inset,
+    -3px -3px 6px var(--s-sh-light) inset;
+
+  /* ---- 圆角：Neumorphism 偏好大圆角，柔和 ---- */
+  --s-r-sm: 10px;
+  --s-r-md: 14px;
+  --s-r-lg: 20px;
+  --s-r-pill: 999px;
+
+  /* ---- 字体 ---- */
+  --s-font: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  --s-font-serif: "Songti SC", "STSong", "Noto Serif SC", serif;
+
+  /* ---- 间距 ---- */
+  --s-sp-1: 4px;
+  --s-sp-2: 8px;
+  --s-sp-3: 12px;
+  --s-sp-4: 16px;
+  --s-sp-5: 24px;
+  --s-sp-6: 32px;
+  --s-sp-8: 48px;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --s-bg:            #262a33;
+  --s-bg-deep:       #21242c;
+  --s-surface:       #262a33;
+  --s-surface-2:     #2b303a;
+  --s-ink:           #c3c9d4;
+  --s-ink-soft:      #969ead;
+  --s-ink-faint:     #6d7583;
+  --s-line:          transparent;
+
+  --s-primary:       #7ba0bf;
+  --s-primary-deep:  #5f86a8;
+  --s-primary-light: #9db9d2;
+  --s-accent:        #6ba3a0;
+  --s-accent-deep:   #558a87;
+  --s-danger:        #c07b74;
+  --s-danger-deep:   #a3645e;
+  --s-gold:          #c2a15e;
+
+  --s-sh-dark:       #1d2027;
+  --s-sh-dark-strong:#171a20;
+  --s-sh-light:      #313742;
+  --s-sh-light-soft: #2d323c;
+
+  color-scheme: dark;
+}

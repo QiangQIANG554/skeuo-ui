@@ -1,0 +1,58 @@
+/* Skeuo UI 文档站主题 —— 浅色新拟物 */
+:root {
+  --vp-c-brand-1: #5f86a8;
+  --vp-c-brand-2: #6d94b5;
+  --vp-c-brand-3: #4d7290;
+  --vp-c-brand-soft: rgba(95, 134, 168, 0.14);
+  --vp-c-bg: #f7f6f2;
+  --vp-c-bg-alt: #efece6;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f0eee8;
+  --vp-c-text-1: #2e2c28;
+  --vp-c-text-2: #5c5952;
+  --vp-c-text-3: #8d8a80;
+  --vp-c-divider: #e2dfd8;
+  --vp-c-gutter: #ece9e3;
+  --vp-sidebar-bg-color: #f7f6f2;
+  --vp-c-mute: #ece9e3;
+  --vp-c-mute-dark: #e2dfd8;
+}
+
+.dark {
+  --vp-c-bg: #2a2a2e;
+  --vp-c-bg-alt: #242428;
+  --vp-c-bg-elv: #303034;
+  --vp-c-bg-soft: #2e2e33;
+  --vp-c-text-1: #e6e6e9;
+  --vp-c-text-2: #a8a8b0;
+  --vp-c-text-3: #6f6f78;
+  --vp-c-divider: #3a3a40;
+  --vp-c-gutter: #323236;
+  --vp-c-brand-1: #8aa9c5;
+  --vp-c-brand-2: #9db8d0;
+  --vp-c-brand-3: #7699b8;
+}
+
+/* 拟物卡片 */
+.VPDoc .content-container {
+  max-width: 900px;
+}
+
+/* 代码块微拟物 */
+.vp-doc div[class*='language-'] {
+  border-radius: 14px;
+  box-shadow: 6px 6px 14px rgba(160, 155, 140, 0.22), -4px -4px 10px rgba(255, 255, 255, 0.9);
+}
+
+/* 表格拟物化 */
+.vp-doc table {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: inset 4px 4px 8px rgba(180, 175, 160, 0.18), inset -4px -4px 8px rgba(255, 255, 255, 0.85);
+  border: none;
+}
+
+/* 首页 hero 微调 */
+.VPHero .name {
+  font-family: Georgia, 'Times New Roman', serif;
+}
