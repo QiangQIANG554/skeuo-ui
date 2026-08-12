@@ -75,7 +75,7 @@ const display = computed(() => icons[props.type] ?? icons.info)
 .s-result__icon--warning { background: linear-gradient(145deg, var(--s-warning), var(--s-warning-deep)); box-shadow: 4px 4px 10px var(--s-sh-dark), -4px -4px 10px var(--s-sh-light); }
 .s-result__icon--info { background: linear-gradient(145deg, var(--s-primary), var(--s-primary-deep)); box-shadow: 4px 4px 10px var(--s-sh-dark), -4px -4px 10px var(--s-sh-light); }
 .s-result__icon--empty { background: var(--s-bg-deep); color: var(--s-ink-faint); box-shadow: var(--s-shadow-inset); }
-.s-result__icon--nf { background: linear-gradient(145deg, var(--s-accent), var(--s-accent-deep)); box-shadow: 4px 4px 10px var(--s-sh-dark), -4px -4px 10px var(--s-sh-light); font-size: 26px; }
+.s-result__icon--nf { background: linear-gradient(145deg, var(--s-danger), var(--s-danger-deep)); box-shadow: 4px 4px 10px var(--s-sh-dark), -4px -4px 10px var(--s-sh-light); font-size: 26px; }
 .s-result__title { margin: 0; font-family: var(--s-font-serif); font-size: 22px; color: var(--s-ink); }
 .s-result__desc { margin: 0; font-size: 13px; color: var(--s-ink-soft); max-width: 380px; line-height: 1.7; }
 .s-result__extra { margin-top: 6px; display: flex; gap: 10px; justify-content: center; }

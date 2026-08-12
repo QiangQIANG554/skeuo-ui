@@ -316,7 +316,7 @@ async function demoConfirm() {
 </script>
 
 <template>
-  <div class="lab">
+  <div class="lab skeuo-scroll">
     <div class="lab__wrap">
       <!-- HERO -->
       <header class="lab__hero">

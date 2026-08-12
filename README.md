@@ -29,6 +29,13 @@
 - 📊 **图表封装** — SChart 基于 ECharts **按需注册**，只打包用到的图表类型（体积 -37%）
 - 🔔 **编程式 API** — `message` / `notification` / `confirm` 开箱即用
 - 🚀 **可发布** — ESM + UMD + 类型声明，`npm pack` 真实安装验证通过
+- 以下为部分展示，效果图在./docs/public中 ヾ(*´∀ ˋ*)ﾉ
+
+<p align="center">
+  <img src="./docs/public/login.jpeg" alt="Skeuo UI 登录页" width="32%" style="border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);" />
+  <img src="./docs/public/image1.png" alt="Skeuo UI 组件预览" width="32%" style="border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);" />
+  <img src="./docs/public/image2.png" alt="Skeuo UI 组件预览" width="32%" style="border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);" />
+</p>
 
 ## 📚 文档
 

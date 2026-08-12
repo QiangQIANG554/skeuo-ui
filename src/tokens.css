@@ -22,6 +22,10 @@
   --s-primary-light: #7ba0bf;
   --s-accent:        #6ba3a0;
   --s-accent-deep:   #558a87;
+  --s-success:       #5c9a8f;
+  --s-success-deep:  #47857a;
+  --s-warning:       #c9a45e;
+  --s-warning-deep:  #ab8a48;
   --s-danger:        #c07b74;
   --s-danger-deep:   #a3645e;
   --s-gold:          #c2a15e;
@@ -83,6 +87,10 @@
   --s-primary-light: #9db9d2;
   --s-accent:        #6ba3a0;
   --s-accent-deep:   #558a87;
+  --s-success:       #6fae9f;
+  --s-success-deep:  #559687;
+  --s-warning:       #d3b26e;
+  --s-warning-deep:  #b89554;
   --s-danger:        #c07b74;
   --s-danger-deep:   #a3645e;
   --s-gold:          #c2a15e;

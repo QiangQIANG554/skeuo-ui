@@ -26,3 +26,85 @@
   border-radius: var(--s-r-md);
   box-shadow: var(--s-shadow-pressed);
 }
+
+/* ============================================================
+   滚动条 — Neumorphism 风格
+   轨道 = 内凹（inset），滑块 = 凸起（raised）
+   hover 时滑块加深阴影（更"浮起"）
+   注意：Chrome 只认无前缀全局 ::-webkit-scrollbar（crbug 1166886），
+   Edge 认 html.skeuo-scroll 前缀——两种选择器都写以全兼容。
+   ============================================================ */
+::-webkit-scrollbar,
+.skeuo-scroll ::-webkit-scrollbar,
+.skeuo-scroll::-webkit-scrollbar,
+html.skeuo-scroll ::-webkit-scrollbar,
+html.skeuo-scroll::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track,
+.skeuo-scroll ::-webkit-scrollbar-track,
+.skeuo-scroll::-webkit-scrollbar-track,
+html.skeuo-scroll ::-webkit-scrollbar-track,
+html.skeuo-scroll::-webkit-scrollbar-track {
+  background: var(--s-bg);
+  border-radius: var(--s-r-pill);
+  box-shadow: var(--s-shadow-inset);
+}
+
+::-webkit-scrollbar-thumb,
+.skeuo-scroll ::-webkit-scrollbar-thumb,
+.skeuo-scroll::-webkit-scrollbar-thumb,
+html.skeuo-scroll ::-webkit-scrollbar-thumb,
+html.skeuo-scroll::-webkit-scrollbar-thumb {
+  background: var(--s-sh-dark);
+  border-radius: var(--s-r-pill);
+  box-shadow: var(--s-shadow-raised-sm);
+  border: 2px solid var(--s-bg);
+  min-height: 32px;
+  min-width: 32px;
+  transition: box-shadow 0.15s;
+}
+
+::-webkit-scrollbar-thumb:hover,
+.skeuo-scroll ::-webkit-scrollbar-thumb:hover,
+.skeuo-scroll::-webkit-scrollbar-thumb:hover,
+html.skeuo-scroll ::-webkit-scrollbar-thumb:hover,
+html.skeuo-scroll::-webkit-scrollbar-thumb:hover {
+  box-shadow: var(--s-shadow-raised);
+}
+
+::-webkit-scrollbar-thumb:active,
+.skeuo-scroll ::-webkit-scrollbar-thumb:active,
+.skeuo-scroll::-webkit-scrollbar-thumb:active,
+html.skeuo-scroll ::-webkit-scrollbar-thumb:active,
+html.skeuo-scroll::-webkit-scrollbar-thumb:active {
+  box-shadow: var(--s-shadow-pressed);
+}
+
+::-webkit-scrollbar-corner,
+.skeuo-scroll ::-webkit-scrollbar-corner,
+.skeuo-scroll::-webkit-scrollbar-corner,
+html.skeuo-scroll ::-webkit-scrollbar-corner,
+html.skeuo-scroll::-webkit-scrollbar-corner {
+  background: var(--s-bg);
+}
+
+/* Firefox 专用标准属性（Firefox 不认 ::-webkit-scrollbar 伪元素，只能用标准属性）
+   注意：不能用全局 * 声明——Chrome 121+ 也认标准属性且优先于伪元素，
+   一旦声明 Chrome 就切到标准渲染（不支持圆角，变长方形）。
+   所以标准属性必须限定 Firefox。 */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--s-sh-dark) var(--s-bg);
+  }
+
+  .skeuo-scroll,
+  html.skeuo-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--s-sh-dark) var(--s-bg);
+  }
+}
+

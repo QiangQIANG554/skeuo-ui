@@ -126,7 +126,7 @@ onBeforeUnmount(() => {
             </SButton>
           </div>
 
-          <SCodeInput v-model="code" :length="6" />
+          <SCodeInput v-model="code" :length="6" class="svp-code" />
 
           <SButton type="primary" block :disabled="!canSubmit" @click="submit">
             下一步
@@ -235,5 +235,9 @@ onBeforeUnmount(() => {
   text-align: center;
   font-size: 12px;
   color: var(--s-ink-faint);
+}
+/* 验证码页验证码数字：粉色 */
+.svp-code :deep(.s-code__cell--filled) {
+  color: rgb(241, 156, 187);
 }
 </style>

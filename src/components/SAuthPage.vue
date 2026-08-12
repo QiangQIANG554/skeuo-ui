@@ -146,7 +146,7 @@ function submit() {
 
             <div class="auth__field">
               <label class="auth__label">密码</label>
-              <SInput v-model="password" type="password" placeholder="请输入密码" />
+              <SInput v-model="password" type="password" placeholder="请输入密码" class="auth__pwd" />
             </div>
             <div class="auth__row">
               <SCheckbox v-model="agree" label="记住我" />
@@ -180,11 +180,11 @@ function submit() {
           </div>
           <div class="auth__field">
             <label class="auth__label">密码</label>
-            <SInput v-model="password" type="password" placeholder="至少 6 位" />
+            <SInput v-model="password" type="password" placeholder="至少 6 位" class="auth__pwd" />
           </div>
           <div class="auth__field">
             <label class="auth__label">确认密码</label>
-            <SInput v-model="confirmPwd" type="password" placeholder="再次输入密码" />
+            <SInput v-model="confirmPwd" type="password" placeholder="再次输入密码" class="auth__pwd" />
           </div>
           <SCheckbox v-model="agree" label="我已阅读并同意服务条款和隐私政策" />
           <SButton type="primary" block :disabled="loading" style="margin-top: 8px">
@@ -305,6 +305,10 @@ function submit() {
 .auth__link:hover { text-decoration: underline; }
 .auth__alt { text-align: center; display: flex; justify-content: center; align-items: center; gap: 12px; }
 .auth__alt-sep { color: var(--s-ink-faint); font-size: 12px; opacity: 0.6; }
+/* 登录/注册页密码输入框：粉色文字（placeholder 保持原色） */
+.auth__pwd :deep(.s-input__inner) {
+  color: rgb(241, 156, 187);
+}
 .auth__alt-btn {
   border: none;
   background: transparent;

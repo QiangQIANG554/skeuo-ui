@@ -23,7 +23,6 @@ export default defineConfig(({ command }) => {
         tsconfigPath: './tsconfig.json',
         include: ['src'],
         exclude: ['src/App.vue'],
-        rollupTypes: false,
       }),
     ],
     build: {
