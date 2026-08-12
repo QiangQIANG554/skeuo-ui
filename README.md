@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./logo.svg" width="96" alt="Skeuo UI" />
+  <img src="./logo.png" width="96" alt="Skeuo UI" />
 </p>
 
 <h1 align="center">Skeuo UI</h1>
