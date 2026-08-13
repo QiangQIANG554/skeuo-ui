@@ -55,9 +55,22 @@ defineOptions({ name: 'SChart' })
 const el = ref<HTMLDivElement | null>(null)
 const chart = shallowRef<echarts.ECharts | null>(null)
 let ro: ResizeObserver | null = null
+let pendingInit = false
 
 function render() {
   if (!el.value) return
+  // DOM 尺寸为 0（容器隐藏/未布局完成）时延迟初始化，避免 echarts 宽高警告
+  const { clientWidth, clientHeight } = el.value
+  if (clientWidth === 0 || clientHeight === 0) {
+    if (!pendingInit) {
+      pendingInit = true
+      requestAnimationFrame(() => {
+        pendingInit = false
+        render()
+      })
+    }
+    return
+  }
   if (!chart.value) {
     chart.value = echarts.init(el.value)
   }
@@ -66,8 +79,15 @@ function render() {
 
 onMounted(() => {
   render()
-  if (props.autoresize && typeof ResizeObserver !== 'undefined') {
-    ro = new ResizeObserver(() => chart.value?.resize())
+  // 观察尺寸变化：① chart 未初始化（容器从隐藏到显示）时补渲染；② autoresize 时跟随 resize
+  if (typeof ResizeObserver !== 'undefined') {
+    ro = new ResizeObserver(() => {
+      if (!chart.value) {
+        render()
+      } else if (props.autoresize) {
+        chart.value?.resize()
+      }
+    })
     if (el.value) ro.observe(el.value)
   }
   window.addEventListener('resize', onWindowResize)

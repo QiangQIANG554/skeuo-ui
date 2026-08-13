@@ -10,6 +10,10 @@ export interface ContextMenuItem {
   onClick?: () => void
 }
 
+const emit = defineEmits<{
+  (e: 'select', item: ContextMenuItem): void
+}>()
+
 const props = withDefaults(defineProps<{
   items?: ContextMenuItem[]
 }>(), {
@@ -41,6 +45,7 @@ function pick(item: ContextMenuItem) {
   if (item.disabled || item.divider) return
   close()
   item.onClick?.()
+  emit('select', item)
 }
 
 function onGlobal(e: MouseEvent) {
