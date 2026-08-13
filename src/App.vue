@@ -18,6 +18,10 @@ import {
   SInfiniteScroll, SLazyLoad, SContextMenu, SFullScreen,
   type SelectOption,
 } from '@/index'
+import FxPage from './FxPage.vue'
+
+// ---- 页面切换：组件实验室 / 2D 特效页 ----
+const view = ref<'lab' | 'fx'>('lab')
 
 // ---- 演示状态 ----
 const theme = ref<'light' | 'dark'>(localStorage.getItem('skeuo-theme') === 'dark' ? 'dark' : 'light')
@@ -316,7 +320,11 @@ async function demoConfirm() {
 </script>
 
 <template>
-  <div class="lab skeuo-scroll">
+  <!-- 2D 特效页 -->
+  <FxPage v-if="view === 'fx'" @back="view = 'lab'" />
+
+  <!-- 组件实验室 -->
+  <div v-else class="lab skeuo-scroll">
     <div class="lab__wrap">
       <!-- HERO -->
       <header class="lab__hero">
@@ -325,6 +333,7 @@ async function demoConfirm() {
           <p>轻拟物风 Vue3 组件库 · Token 驱动 · 按下即凹陷 · <code>app.use(SkeuoUI)</code> 全局引入或按需 import</p>
         </div>
         <div class="lab__controls">
+          <SButton size="sm" @click="view = 'fx'">✨ 2D 特效页</SButton>
           <SButton size="sm" @click="toggleTheme">{{ theme === 'dark' ? '☀️ 浅色' : '🌗 深色' }}</SButton>
         </div>
       </header>

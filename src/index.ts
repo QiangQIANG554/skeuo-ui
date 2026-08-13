@@ -76,6 +76,32 @@ import SInfiniteScroll from './components/SInfiniteScroll.vue'
 import SLazyLoad from './components/SLazyLoad.vue'
 import SContextMenu from './components/SContextMenu.vue'
 import SFullScreen from './components/SFullScreen.vue'
+import SMagnetic from './components/SMagnetic.vue'
+import SBurst from './components/SBurst.vue'
+import SParticles from './components/SParticles.vue'
+import SConfetti from './components/SConfetti.vue'
+import STextScramble from './components/STextScramble.vue'
+import SRipple from './components/SRipple.vue'
+import STrail from './components/STrail.vue'
+import SGlitch from './components/SGlitch.vue'
+import SSnowfall from './components/SSnowfall.vue'
+import SWave from './components/SWave.vue'
+import SOrbit from './components/SOrbit.vue'
+import STyping from './components/STyping.vue'
+import SMorph from './components/SMorph.vue'
+import SBubble from './components/SBubble.vue'
+import SHeatmap from './components/SHeatmap.vue'
+import SRain from './components/SRain.vue'
+import STextParticle from './components/STextParticle.vue'
+import SFlame from './components/SFlame.vue'
+import SEye from './components/SEye.vue'
+import SStarfield from './components/SStarfield.vue'
+import SWaveText from './components/SWaveText.vue'
+import SScan from './components/SScan.vue'
+import SPixelate from './components/SPixelate.vue'
+import SProgressFX from './components/SProgressFX.vue'
+import SLoaderRing from './components/SLoaderRing.vue'
+import SParallax from './components/SParallax.vue'
 import { message } from './components/message'
 import { notify, notification } from './components/notification'
 import { confirm } from './components/confirm'
@@ -153,6 +179,32 @@ export {
   SLazyLoad,
   SContextMenu,
   SFullScreen,
+  SMagnetic,
+  SBurst,
+  SParticles,
+  SConfetti,
+  STextScramble,
+  SRipple,
+  STrail,
+  SGlitch,
+  SSnowfall,
+  SWave,
+  SOrbit,
+  STyping,
+  SMorph,
+  SBubble,
+  SHeatmap,
+  SRain,
+  STextParticle,
+  SFlame,
+  SEye,
+  SStarfield,
+  SWaveText,
+  SScan,
+  SPixelate,
+  SProgressFX,
+  SLoaderRing,
+  SParallax,
 }
 
 export { message, notify, notification, confirm }
@@ -239,6 +291,32 @@ const components = [
   SLazyLoad,
   SContextMenu,
   SFullScreen,
+  SMagnetic,
+  SBurst,
+  SParticles,
+  SConfetti,
+  STextScramble,
+  SRipple,
+  STrail,
+  SGlitch,
+  SSnowfall,
+  SWave,
+  SOrbit,
+  STyping,
+  SMorph,
+  SBubble,
+  SHeatmap,
+  SRain,
+  STextParticle,
+  SFlame,
+  SEye,
+  SStarfield,
+  SWaveText,
+  SScan,
+  SPixelate,
+  SProgressFX,
+  SLoaderRing,
+  SParallax,
 ]
 
 /** 全量引入：app.use(SkeuoUI) 后所有 S 组件全局可用 */
