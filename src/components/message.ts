@@ -45,7 +45,7 @@ function show(type: MessageType, options: MessageOptions) {
   const vnode = createVNode(SMessage, {
     type,
     text,
-    duration: opts.duration,
+    duration: opts.duration ?? 2500,
     placement,
     onClose: () => {
       render(null, host)
