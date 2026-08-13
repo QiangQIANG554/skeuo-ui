@@ -1,5 +1,9 @@
 import type { App, Plugin } from 'vue'
 
+// 基础样式 + 设计令牌：必须随包分发（使用者 import 'skeuo-ui/style.css' 即获得全部）
+import './tokens.css'
+import './base.css'
+
 import SButton from './components/SButton.vue'
 import SInput from './components/SInput.vue'
 import SSelect from './components/SSelect.vue'
